@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Threadingss\bin\Debug\Threadingss.exe.config
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Threadingss\bin\Debug\Threadingss.exe
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Threadingss\bin\Debug\Threadingss.pdb
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Threadingss\obj\Debug\Threadingss.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Threadingss\obj\Debug\Threadingss.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Threadingss\obj\Debug\Threadingss.exe
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Threadingss\obj\Debug\Threadingss.pdb

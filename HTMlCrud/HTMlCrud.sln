@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMlCrud", "HTMlCrud\HTMlCrud.csproj", "{1A62FDA6-0D0D-4517-9BD5-228EBFA31AEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A62FDA6-0D0D-4517-9BD5-228EBFA31AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A62FDA6-0D0D-4517-9BD5-228EBFA31AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A62FDA6-0D0D-4517-9BD5-228EBFA31AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A62FDA6-0D0D-4517-9BD5-228EBFA31AEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26B54C23-4926-49AF-8281-24E0FF449C4A}
+	EndGlobalSection
+EndGlobal

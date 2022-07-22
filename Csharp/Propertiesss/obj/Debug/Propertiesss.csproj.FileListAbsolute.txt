@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Propertiesss\bin\Debug\Propertiesss.exe.config
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Propertiesss\bin\Debug\Propertiesss.exe
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Propertiesss\bin\Debug\Propertiesss.pdb
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Propertiesss\obj\Debug\Propertiesss.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Propertiesss\obj\Debug\Propertiesss.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Propertiesss\obj\Debug\Propertiesss.exe
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\Propertiesss\obj\Debug\Propertiesss.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSDemo", "JSDemo\JSDemo.csproj", "{6A853E56-707C-49D7-9538-4064BA74544D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A853E56-707C-49D7-9538-4064BA74544D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A853E56-707C-49D7-9538-4064BA74544D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A853E56-707C-49D7-9538-4064BA74544D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A853E56-707C-49D7-9538-4064BA74544D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBE5ECF0-B92D-421D-863C-8CC1385240AE}
+	EndGlobalSection
+EndGlobal

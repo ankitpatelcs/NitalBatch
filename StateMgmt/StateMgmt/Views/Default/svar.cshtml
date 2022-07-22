@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "svar";
+}
+
+<h2>svar</h2>
+
+<h3>@ViewBag.data</h3>
+<h3>@ViewData["msg"]</h3>
+<h3>@TempData["info"]</h3>
+
+<p>
+    <a href="/Default/second">Second View</a>
+</p>
+
+
+
+
+
+
+<br />
+<p>
+    @{ 
+        TempData.Keep("info");
+    }
+</p>

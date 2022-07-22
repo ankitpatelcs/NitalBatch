@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\indexerss\bin\Debug\indexerss.exe.config
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\indexerss\bin\Debug\indexerss.exe
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\indexerss\bin\Debug\indexerss.pdb
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\indexerss\obj\Debug\indexerss.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\indexerss\obj\Debug\indexerss.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\indexerss\obj\Debug\indexerss.exe
+C:\Ankit Patel\Lectures\NitalBatch\Csharp\indexerss\obj\Debug\indexerss.pdb
