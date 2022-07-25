@@ -93,7 +93,7 @@
                 @Html.DisplayFor(modelItem => item.hobbies)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.profileimg)
+                <img src="~/Docs/@item.profileimg" height="80" width="80" />
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
