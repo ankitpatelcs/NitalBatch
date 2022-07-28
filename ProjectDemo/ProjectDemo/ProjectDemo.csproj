@@ -415,6 +415,11 @@
     <Content Include="EDM\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\Shared\Admin_LayoutPage.cshtml" />
+    <Content Include="Areas\Admin\Views\Master\Dashboard.cshtml" />
+    <Content Include="Areas\Admin\Views\Master\AddProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Master\ManageProducts.cshtml" />
+    <Content Include="Areas\Admin\Views\Master\Login.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
