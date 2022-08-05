@@ -63,7 +63,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <form action="#" method="post" class="last">
                     <input type="hidden" name="cmd" value="_cart">
                     <input type="hidden" name="display" value="1">
-                    <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                    <a class="w3view-cart" href="/Users/Default/Cart">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    </a>
                 </form>
             </div>
             <div class="clearfix"> </div>
@@ -110,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/Users/Default/HomePage" class="act">Home</a></li>                       
+                        <li class="active"><a href="/Users/Default/HomePage" class="act">Home</a></li>
                         <li><a href="/Users/Default/Products">Products</a></li>
                         <li><a href="offers.html">Offers</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -214,17 +216,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <!-- //here ends scrolling icon -->
-    <script src="~/Areas/Users/web/js/minicart.min.js"></script>
-    <script>
-        // Mini Cart
-        paypal.minicart.render({
-            action: '#'
-        });
-
-        if (~window.location.search.indexOf('reset=true')) {
-            paypal.minicart.reset();
-        }
-    </script>
     <!-- main slider-banner -->
     <script src="~/Areas/Users/web/js/skdslider.min.js"></script>
     <link href="~/Areas/Users/web/css/skdslider.css" rel="stylesheet">

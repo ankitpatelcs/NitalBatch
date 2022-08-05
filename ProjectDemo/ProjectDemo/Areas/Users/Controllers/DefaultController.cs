@@ -62,14 +62,30 @@ namespace ProjectDemo.Areas.Users.Controllers
         public string AddToCart(int id)
         {
             int userid = Convert.ToInt32(Session["UserId"]);
-            tblcart obj = new tblcart();
-            obj.product_id = id;
-            obj.qty = 1;
-            obj.user_id = userid;
+            var cartobj = dc.tblcarts.Where(c => c.product_id == id).FirstOrDefault();
+            if (cartobj==null)
+            {
+                tblcart obj = new tblcart();
+                obj.product_id = id;
+                obj.qty = 1;
+                obj.user_id = userid;
 
-            dc.tblcarts.Add(obj);
-            dc.SaveChanges();
+                dc.tblcarts.Add(obj);
+                dc.SaveChanges();
+            }
+            else
+            {
+                cartobj.qty += 1;
+                dc.Entry(cartobj).State = System.Data.Entity.EntityState.Modified;
+                dc.SaveChanges();
+            }
             return "Product added to Cart.";
+        }
+
+        public ActionResult Cart()
+        {
+            int userid = Convert.ToInt32(Session["UserId"]);
+            return View(dc.tblcarts.Where(c=>c.user_id==userid).ToList());
         }
     }
 }

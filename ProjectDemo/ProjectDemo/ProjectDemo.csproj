@@ -436,6 +436,7 @@
     <Content Include="Areas\Users\Views\Default\Products.cshtml" />
     <Content Include="Areas\Users\Views\Default\ProductDetai.cshtml" />
     <Content Include="Areas\Users\Views\Default\Single.cshtml" />
+    <Content Include="Areas\Users\Views\Default\Cart.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

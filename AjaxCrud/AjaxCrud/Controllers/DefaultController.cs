@@ -21,8 +21,28 @@ namespace AjaxCrud.Controllers
             dc.Configuration.ProxyCreationEnabled = false;
             return Json(dc.tblemployees.ToList(), JsonRequestBehavior.AllowGet);
         }
+
+        void Fillstates()
+        {
+            var statelist = from s in dc.tblstates
+                            select new SelectListItem
+                            {
+                                Text = s.state_name,
+                                Value = s.state_id.ToString()
+                            };
+            ViewBag.states = statelist.ToList();
+        }
+
+        public JsonResult GetCitiesByStateId(int id)
+        {
+            dc.Configuration.ProxyCreationEnabled = false;
+            var data = dc.tblcities.Where(c => c.state_id == id).ToList();
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Create()
         {
+            Fillstates();
             return View();
         }
         [HttpPost]

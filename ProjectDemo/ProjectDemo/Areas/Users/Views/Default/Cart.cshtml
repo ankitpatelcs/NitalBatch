@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ProjectDemo.EDM.tblcart>
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Areas/Users/Views/Shared/User_LayoutPage.cshtml";
+}
+<div class="products">
+    <div class="container">
+        <h2>Cart</h2>
+
+        <p>
+            <br />
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.cart_id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.product_id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.qty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.user_id)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cart_id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.product_id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.qty)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.user_id)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
