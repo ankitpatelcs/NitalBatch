@@ -4,6 +4,9 @@
     ViewBag.Title = "Cart";
     Layout = "~/Areas/Users/Views/Shared/User_LayoutPage.cshtml";
 }
+<link href="~/NumericTextBoxStyle/StyleSheet1.css" rel="stylesheet" />
+<script src="~/NumericTextBoxStyle/JavaScript.js"></script>
+
 <div class="products">
     <div class="container">
         <h2>Cart</h2>
@@ -14,17 +17,18 @@
         <table class="table">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.cart_id)
+                    Product Image
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.product_id)
+                    Product Name
                 </th>
+                <th>Cost</th>
+                <th>Discount</th>
+
                 <th>
                     @Html.DisplayNameFor(model => model.qty)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.user_id)
-                </th>
+                <th>Amount</th>
                 <th></th>
             </tr>
 
@@ -32,23 +36,45 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.cart_id)
+                        <img src="~/Images/Products/@item.tblproduct.image1" height="100" width="100" />
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.product_id)
+                        @item.tblproduct.product_name
+                    </td>
+                    <td>@item.tblproduct.cost</td>
+                    <td>@item.tblproduct.discount</td>
+                    <td>
+                        <div class="quantity buttons_added">
+                            <input type="button" value="-" class="minus">
+                            <input type="number" id="txtqty@(item.cart_id)" step="1" min="1" name="quantity"
+                                   value="@item.qty" class="input-text qty text"
+                                   onchange="updateCartQty(@item.cart_id, document.getElementById('txtqty@(item.cart_id)').value)">
+                            <input type="button" value="+" class="plus">
+                        </div>
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.qty)
+                        @((item.tblproduct.cost-(item.tblproduct.cost*item.tblproduct.discount/100))*item.qty)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.user_id)
-                    </td>
+
                     <td>
                         @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
                     </td>
                 </tr>
             }
-
         </table>
+        <script>
+            function updateCartQty(cartid, qty) {
+                $.ajax({
+                    url: "/Users/Default/UpdateCartQty",
+                    type: "POST",
+                    data: { id: cartid, qty: qty },
+                    dataType: "text",
+                    success: function (data) {
+                        alert(data);
+                        window.location.href = "/Users/Default/Cart";
+                    }
+                });
+            }
+        </script>
     </div>
 </div>

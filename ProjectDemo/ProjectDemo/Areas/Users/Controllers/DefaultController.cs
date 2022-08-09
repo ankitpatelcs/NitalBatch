@@ -82,6 +82,17 @@ namespace ProjectDemo.Areas.Users.Controllers
             return "Product added to Cart.";
         }
 
+        [HttpPost]
+        public string UpdateCartQty(int id, int qty)
+        {
+            var obj = dc.tblcarts.Find(id);
+            obj.qty = qty;
+
+            dc.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            dc.SaveChanges();
+            return "Cart Qty updated.";
+        }
+
         public ActionResult Cart()
         {
             int userid = Convert.ToInt32(Session["UserId"]);
