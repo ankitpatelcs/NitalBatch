@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProjectDemo.EDM;
+using ProjectDemo.Models;
 
 namespace ProjectDemo.Areas.Users.Controllers
 {
@@ -97,6 +98,37 @@ namespace ProjectDemo.Areas.Users.Controllers
         {
             int userid = Convert.ToInt32(Session["UserId"]);
             return View(dc.tblcarts.Where(c=>c.user_id==userid).ToList());
+        }
+
+        public ActionResult Checkout()
+        {
+            int userid = Convert.ToInt32(Session["UserId"]);
+            tblorder objorder = new tblorder();
+            objorder.orderdate = DateTime.Now;
+            objorder.user_id = userid;
+            objorder.status = (byte)OrderStatusEnum.Confirmed;
+
+            dc.tblorders.Add(objorder);
+            dc.SaveChanges();
+
+            var cart = dc.tblcarts.Where(c=>c.user_id==userid).ToList();
+            tblorderdetail objorderdetail = new tblorderdetail();
+            foreach (var item in cart)
+            {
+                objorderdetail.product_id = item.product_id;
+                objorderdetail.qty = item.qty;
+                objorderdetail.order_id = objorder.order_id;
+
+                dc.tblorderdetails.Add(objorderdetail);
+                dc.SaveChanges();
+            }
+
+            return RedirectToAction("Success");
+        }
+
+        public ActionResult Success()
+        {
+            return View();
         }
     }
 }

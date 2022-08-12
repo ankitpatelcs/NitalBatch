@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Cart";
     Layout = "~/Areas/Users/Views/Shared/User_LayoutPage.cshtml";
+    double? CartTotal = 0;
 }
 <link href="~/NumericTextBoxStyle/StyleSheet1.css" rel="stylesheet" />
 <script src="~/NumericTextBoxStyle/JavaScript.js"></script>
@@ -53,7 +54,11 @@
                         </div>
                     </td>
                     <td>
-                        @((item.tblproduct.cost-(item.tblproduct.cost*item.tblproduct.discount/100))*item.qty)
+                        @{
+                            double? Amount = (item.tblproduct.cost - (item.tblproduct.cost * item.tblproduct.discount / 100)) * item.qty;
+                            CartTotal += Amount;
+                        }
+                        @Amount
                     </td>
 
                     <td>
@@ -76,5 +81,30 @@
                 });
             }
         </script>
+
+        <div class="col-md-3 pull-right">
+            <table class="table">
+                <tr>
+                    <th colspan="2">Cart Summary</th>
+                </tr>
+                <tr>
+                    <th>Cart Total</th>
+                    <td>₹ @CartTotal</td>
+                </tr>
+                <tr>
+                    <th>GST (@@18%)</th>
+                    <td>₹ @(CartTotal*18/100)</td>
+                </tr>
+                <tr>
+                    <th>Grand Total</th>
+                    <td>₹ @(CartTotal+(CartTotal*18/100))</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="/Users/Default/Checkout" class="btn btn-warning col-md-12">Checkout</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
