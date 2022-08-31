@@ -4,10 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProjectDemo.EDM;
+using ProjectDemo.Filters;
 using ProjectDemo.Models;
 
 namespace ProjectDemo.Areas.Users.Controllers
 {
+    [CustomAuthenticationFilter]
     public class DefaultController : Controller
     {
         ecommerceEntities dc = new ecommerceEntities();
@@ -51,6 +53,8 @@ namespace ProjectDemo.Areas.Users.Controllers
         {
             return View();
         }
+
+        
         public ActionResult Products()
         {
             return View(dc.tblproducts.ToList());

@@ -18,7 +18,7 @@ namespace ADOCrud.Services
 
         public List<tblemployee> GetEmployees()
         {
-            SqlDataAdapter da = new SqlDataAdapter("select * from tblemployee", cn);
+            SqlDataAdapter da = new SqlDataAdapter("exec GetAllEmployees 0,0", cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
@@ -41,7 +41,7 @@ namespace ADOCrud.Services
 
         public tblemployee GetEmployeeById(int id)
         {
-            SqlDataAdapter da = new SqlDataAdapter("select * from tblemployee where emp_id=" + id, cn);
+            SqlDataAdapter da = new SqlDataAdapter("exec GetAllEmployees " + id + ",1", cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
 
